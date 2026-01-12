@@ -1,4 +1,4 @@
-# 💊 Medicine Reminder App (Flutter)
+# 💊 Medicine Reminder App (Flutter) (In 20 Mins)
 
 ## Getting Started
 ## 📱 App Screenshots
