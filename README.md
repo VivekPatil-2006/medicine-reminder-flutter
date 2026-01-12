@@ -4,11 +4,27 @@
 Screen Shots
 ## 📱 App Screenshots
 
-### 🏠 Screen 1
-![Home Screen](https://github.com/VivekPatil-2006/medicine-reminder-flutter/blob/main/ss-1.jpeg)
-### 🏠 Screen 2
-![Home Screen](https://github.com/VivekPatil-2006/medicine-reminder-flutter/blob/main/ss-2.jpeg)
-### 🏠 Screen 3
-![Home Screen](https://github.com/VivekPatil-2006/medicine-reminder-flutter/blob/main/ss-3.jpeg)
-### 🏠 Screen 4
-![Home Screen](https://github.com/VivekPatil-2006/medicine-reminder-flutter/blob/main/ss-4.jpeg)
+## 📱 App Screenshots
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/VivekPatil-2006/medicine-reminder-flutter/blob/main/ss-1.jpeg" width="250"/><br/>
+      <b>Screen 1</b>
+    </td>
+    <td align="center">
+      <img src="https://github.com/VivekPatil-2006/medicine-reminder-flutter/blob/main/ss-2.jpeg" width="250"/><br/>
+      <b>Screen 2</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/VivekPatil-2006/medicine-reminder-flutter/blob/main/ss-3.jpeg" width="250"/><br/>
+      <b>Screen 3</b>
+    </td>
+    <td align="center">
+      <img src="https://github.com/VivekPatil-2006/medicine-reminder-flutter/blob/main/ss-4.jpeg" width="250"/><br/>
+      <b>Screen 4</b>
+    </td>
+  </tr>
+</table>
