@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 
 import '../provider/medicine_provider.dart';
+import '../core/notification_service.dart';
 import 'add_medicine_screen.dart';
 
 class HomeScreen extends ConsumerWidget {
@@ -21,19 +22,39 @@ class HomeScreen extends ConsumerWidget {
         centerTitle: true,
       ),
 
-      body: medicines.isEmpty
-          ? _EmptyState()
-          : ListView.builder(
-        padding: const EdgeInsets.all(12),
-        itemCount: medicines.length,
-        itemBuilder: (context, index) {
-          final med = medicines[index];
-          return _MedicineCard(
-            name: med.name,
-            dose: med.dose,
-            time: DateFormat.jm().format(med.time),
-          );
-        },
+      body: Column(
+        children: [
+          // 🔔 DEMO BUTTON (FOR POCO / MIUI)
+          Padding(
+            padding: const EdgeInsets.all(12),
+            child: ElevatedButton.icon(
+              onPressed: () {
+                NotificationService.showInstantNotification(
+                  medicineName: 'Demo Medicine',
+                );
+              },
+              icon: const Icon(Icons.notifications_active),
+              label: const Text('Test Notification (Demo)'),
+            ),
+          ),
+
+          Expanded(
+            child: medicines.isEmpty
+                ? const _EmptyState()
+                : ListView.builder(
+              padding: const EdgeInsets.all(12),
+              itemCount: medicines.length,
+              itemBuilder: (context, index) {
+                final med = medicines[index];
+                return _MedicineCard(
+                  name: med.name,
+                  dose: med.dose,
+                  time: DateFormat.jm().format(med.time),
+                );
+              },
+            ),
+          ),
+        ],
       ),
 
       floatingActionButton: FloatingActionButton(
@@ -53,6 +74,8 @@ class HomeScreen extends ConsumerWidget {
 
 /// ---------------- EMPTY STATE ----------------
 class _EmptyState extends StatelessWidget {
+  const _EmptyState();
+
   @override
   Widget build(BuildContext context) {
     return Center(

@@ -68,4 +68,27 @@ class NotificationService {
       UILocalNotificationDateInterpretation.absoluteTime,
     );
   }
+
+  static Future<void> showInstantNotification({
+    required String medicineName,
+  }) async {
+    await _notifications.show(
+      0,
+      'Medicine Reminder',
+      'Time to take $medicineName',
+      const NotificationDetails(
+        android: AndroidNotificationDetails(
+          'medicine_channel',
+          'Medicine Reminder',
+          channelDescription: 'Medicine reminder notifications',
+          importance: Importance.max,
+          priority: Priority.high,
+          playSound: true,
+          enableVibration: true,
+          fullScreenIntent: true,
+        ),
+      ),
+    );
+  }
+
 }
